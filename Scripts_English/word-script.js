@@ -15381,7 +15381,7 @@ function startInteraction() {
 }
 function checkGameState() {
     if (chosenRace == "black") {
-        setTimer(0.2)
+        setTimer(3)
 
         setTimeout(() => {
             setScore("lose")
@@ -15389,7 +15389,7 @@ function checkGameState() {
             promptNewGame()
             roundCounter += 1
             checkCounter()
-        }, 0.2 * MIN_TO_MS);
+        }, 3 * MIN_TO_MS);
     }
 
 }
