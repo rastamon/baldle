@@ -15304,13 +15304,6 @@ const baldWords = [
     "acute",
     "civil"
 ]
-
-const blackMessages = ["You're like actually dumb", 
-                       "Do you really think you can win",
-                      "You'll never get anywhere in your life"]
-const whiteMessages = ["Keep going you're doing such a great job", 
-                       "Don't worry one mistake doesn't define your life",
-                      "You're really smart you got this"]
 const races = ["black", "white"]
 const fillWord = ["w", 'r', 'o', 'n', 'g']
 const WORD_LENGTH = 5;
@@ -15538,29 +15531,10 @@ function flipTile(tile, index, array, guess) {
         else if (targetWord.includes(letter)) {
             tile.dataset.state = 'wrong-location'
             key.classList.add("wrong-location")
-            switch(chosenRace) {
-              case "black":
-                showAlert(blackMessages[randomNumber(blackMessage.length-1)])
-                break;
-              case "white":
-                 showAlert(whiteMessages[randomNumber(whitekMessage.length-1)])
-                break;
-              default:
-                return
-            }
         }
         else {
             tile.dataset.state = 'wrong'
             key.classList.add("wrong")
-            switch(chosenRace) {
-              case "black":
-                showAlert(blackMessages[randomNumber(blackMessage.length-1)])
-                break;
-              case "white":
-                 showAlert(whiteMessages[randomNumber(whitekMessage.length-1)])
-                break;
-              default:
-                return
         }
 
         if (index === array.length - 1) {
@@ -15669,7 +15643,6 @@ function danceTiles(tiles) {
         }, index * DANCE_ANIMATION_DURARTION / 5)
     });
 }
-
 
 
 
